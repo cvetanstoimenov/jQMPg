@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+	<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.0.min.css" />
+        <link rel="stylesheet" type="text/css" href="index.css" />
+    
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.4.0.min.js"></script>
+	<script type="text/javascript" src="cordova-1.5.0.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+  </head>
+
+
+<body onload="onLoad()">
+
+<div data-role="page" id="first">
+<div align="center" data-role="content" id="contentConfirmation" name="contentConfirmation">
+
+    <h1 class='titleClass'>Upišite pristupne podatke</h1>
+	<div data-role="fieldcontain">
+	     <input class="required" id="inputEmail" name="uid_r" type="text" value="" placeholder="Korisnik">          
+	</div>
+	<div data-role="fieldcontain">
+		<input id="password" name="pwd_r" type="password" value="" placeholder="Lozinka">          
+	</div>
+	
+	<div class="ui-grid-a">
+		<div class="ui-block-a"><button data-theme="c" type="button" class="login-btn">cancel</button></div>
+		<div class="ui-block-b"><a href="#second" id="btn_ok" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">OK</span></span></a></div>
+		</div>	   
+   </div>
+	
+	</div>
+	</div>
+	
+	
+</div>
+</div>
+
+
+<div data-role="page" id="second">
+<div align="center" data-role="content" id="contentConfirmation" name="contentConfirmation">
+
+<div data-role="controlgroup" data-type="horizontal">		
+		<button type="button" class="btn-tab" name="svi">svi</button>
+        <button type="button" class="btn-tab" name="preostali">preostali</button>
+        <button type="button" class="btn-tab" name="evidentirani">evidentirani</button>
+    </div>
+	
+	<ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" id="result">
+    </ul>
+
+</div>
+</div>
+
+
+
+
+<div data-role="dialog" id="dialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+    <div data-role="header" data-theme="a">
+    <h1>Promjenu statusa</h1>
+    </div>
+    <div role="main" class="ui-content">
+                      
+        <a href='#' class='img_btn' data-role="button"><img id='firstImage'/><span id="firstTextTd"></span></a>
+                            
+        <a href='#' class='img_btn' data-role="button"><img id='secondImage' /><span id="secondTextTd"></span></a>
+              
+            
+    </div>
+</div>
+
+
+</body>
+</html>
